@@ -40,8 +40,8 @@ wsServer.on('connection', function (socket) {
                 break;
         }
     })
-    socket.on('disconnect', ws => {
-        totalws.delete(ws)
+    socket.on('disconnect', () => {
+        totalws.delete(socket)
         console.log("An Socket Leaved : ❌")
     });
 });
