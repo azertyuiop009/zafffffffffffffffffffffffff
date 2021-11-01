@@ -3,6 +3,7 @@ const PORT = 8088;
 const wsServer = new WebSocket.Server({
     port: process.env.PORT || PORT
 });
+const Users = new Map();
 const totalws = new Map();
 wsServer.on('connection', function (socket) {
     totalws.set(socket, socket)
@@ -39,7 +40,19 @@ wsServer.on('connection', function (socket) {
                 sendall(cmd, args[0])
             break;
             case "position":
-                console.log(cmd, args[0], args[1], args[2])
+                if(User.has(args[0])){
+                User.delete(args[0])
+                User.set(args[0],args[0] : {
+                         x: args[1],
+                         y: args[2]
+                })
+                }else{
+                User.set(args[0],args[0] : {
+                         x: args[1],
+                         y: args[2]
+                })
+                }
+                console.log(User)
             break;
         }
     })
