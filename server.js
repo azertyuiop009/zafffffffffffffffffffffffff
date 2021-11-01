@@ -39,7 +39,7 @@ wsServer.on('connection', function (socket) {
                 sendall(cmd, args[0])
             break;
             case "position":
-                console.log(cmd, args[0])
+                console.log(cmd, args[0], args[1])
             break;
         }
     })
