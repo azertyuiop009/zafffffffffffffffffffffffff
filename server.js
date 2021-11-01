@@ -11,7 +11,7 @@ wsServer.on('connection', function (socket) {
         socket.send(`Socket Handler : ✅`);
     }, 950)
     setInterval(() => {
-    socket.send(`7897897545648976548746589654897654987654987654987654865498654864586`)
+    socket.send(`123456789`)
     },500)
     socket.on('message', text => {
         let fok = new Uint8Array(text);
