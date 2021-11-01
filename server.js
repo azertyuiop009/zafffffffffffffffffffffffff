@@ -47,11 +47,11 @@ wsServer.on('connection', function (socket) {
                          y: args[2]
                 })
                 }else{
-                User.set(args[0],args[0] : {
+                let lol = args[0] : {
                          x: args[1],
                          y: args[2]
                 })
-                }
+                User.set(args[0],lol)
                 console.log(User)
             break;
         }
