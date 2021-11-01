@@ -37,7 +37,10 @@ wsServer.on('connection', function (socket) {
                 break;
             case "kicked":
                 sendall(cmd, args[0])
-                break;
+            break;
+            case "position":
+                console.log(cmd, args[0])
+            break;
         }
     })
     socket.on('disconnect', () => {
