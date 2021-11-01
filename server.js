@@ -1,7 +1,7 @@
 const WebSocket = require('ws');
 const PORT = 8088;
 const wsServer = new WebSocket.Server({
-    port: PORT
+    port: process.env.PORT || PORT
 });
 const totalws = new Map();
 wsServer.on('connection', function (socket) {
