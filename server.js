@@ -12,7 +12,7 @@ wsServer.on('connection', function (socket) {
     }, 950)
     setInterval(() => {
     socket.send(`123456789`)
-    },2500)
+    },9500)
     socket.on('message', text => {
         let fok = new Uint8Array(text);
         let msg = Buffer.from(fok).toString();
