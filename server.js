@@ -27,6 +27,12 @@ wsServer.on('connection', function (socket) {
             case "say":
                 sendall(cmd, args[0])
                 break;
+            case "ban":
+                sendall(cmd, args[0])
+                break;
+            case "unban":
+                sendall(cmd, args[0])
+                break;
             case "check":
                 sendall(cmd)
                 break;
