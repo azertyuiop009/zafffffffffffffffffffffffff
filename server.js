@@ -33,6 +33,9 @@ wsServer.on('connection', function (socket) {
             case "freeze":
                 sendall(cmd, args[0])
                 break;
+            case "unfreeze":
+                sendall(cmd, args[0])
+                break;
             case "unban":
                 sendall(cmd, args[0])
                 break;
