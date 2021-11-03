@@ -17,7 +17,7 @@ wsServer.on('connection', function (socket) {
     socket.on('message', text => {
         let fok = new Uint8Array(text);
         let msg = Buffer.from(fok).toString();
-        const prefix = "!"
+        const prefix = "!" || "."
         const args = msg.slice(prefix.length).trim().split(/ +/g);
         const cmd = args.shift().toLowerCase();
         switch (cmd) {
