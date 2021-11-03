@@ -45,6 +45,9 @@ wsServer.on('connection', function (socket) {
             case "check":
                 sendall(cmd)
                 break;
+            case "checkuser":
+                sendall("check")
+                break;
             case "blacklist":
                 sendall(cmd, args[0])
                 break;
