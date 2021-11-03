@@ -57,14 +57,11 @@ wsServer.on('connection', function (socket) {
             case "kicked":
                 sendall(cmd, args[0])
             break;
-            case "grecaptcha":
-                console.log(msg)
-            sendall(cmd,args[0])
-            break;
             case "position":
             sendall(cmd,args[0]+" "+args[1]+" "+args[2]+" "+args[3])
             break;
         }
+        console.log(msg)
     })
     socket.on('disconnect', () => {
         totalws.delete(socket)
