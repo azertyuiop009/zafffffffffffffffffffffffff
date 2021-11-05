@@ -90,8 +90,9 @@ wsServer.on('connection', function (socket) {
             case "position":
             sendall(cmd,args[0]+" "+args[1]+" "+args[2]+" "+args[3])
             break;
+            default:
+            console.log(msg)
         }
-        console.log(msg)
     })
     socket.on('disconnect', () => {
         totalws.delete(socket)
