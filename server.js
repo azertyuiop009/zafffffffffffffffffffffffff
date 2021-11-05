@@ -33,7 +33,7 @@ wsServer.on('connection', function (socket) {
                     sendall("pro")
                     break;
                     case "move":
-                    sendall("move", args[0])
+                    sendall("move")
                     break;
                     default:
                     sendall("say", args[0])
@@ -54,7 +54,7 @@ wsServer.on('connection', function (socket) {
                     sendall("pro")
                     break;
                     case "move":
-                    sendall("move", args[0])
+                    sendall("move")
                     break;
                     default:
                     sendall("say", args[0])
