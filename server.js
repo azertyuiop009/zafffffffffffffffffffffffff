@@ -24,12 +24,6 @@ wsServer.on('connection', function (socket) {
             case "kick":
                 sendall(cmd, args[0])
                 break;
-            case "idiot":
-                sendall(cmd)
-                break;
-            case "pro":
-                sendall(cmd)
-                break;
             case "say":
                 switch(args[0]){
                     case "idiot":
