@@ -42,7 +42,7 @@ wsServer.on('connection', function (socket) {
             case "hituser":
              sendall("hit")
             break;
-            case "unhituser"
+            case "unhituser":
              sendall("unhit")
             break;
             case "ch":
