@@ -24,11 +24,47 @@ wsServer.on('connection', function (socket) {
             case "kick":
                 sendall(cmd, args[0])
                 break;
-            case "say":
-                sendall(cmd, args[0])
+            case "idiot":
+                sendall(cmd)
                 break;
+            case "pro":
+                sendall(cmd)
+                break;
+            case "say":
+                switch(args[0]){
+                    case "idiot":
+                    sendall("idiot")
+                    break;
+                    case "pro":
+                    sendall("pro")
+                    break;
+                    case "move":
+                    sendall("move", args[0])
+                    break;
+                    default:
+                    sendall("say", args[0])
+                }
+                break;
+            case "hituser":
+             sendall("hit")
+            break;
+            case "unhituser"
+             sendall("unhit")
+            break;
             case "ch":
-                sendall("say", args[0])
+                switch(args[0]){
+                    case "idiot":
+                    sendall("idiot")
+                    break;
+                    case "pro":
+                    sendall("pro")
+                    break;
+                    case "move":
+                    sendall("move", args[0])
+                    break;
+                    default:
+                    sendall("say", args[0])
+                }
                 break;
             case "ban":
                 sendall(cmd, args[0])
